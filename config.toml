@@ -1,4 +1,16 @@
-baseURL = "http://example.org/"
+baseURL = "https://blotta.github.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "temple"
+
+[params]
+    highlight = true
+    topmenu = "categories"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+
+[author]
+    name = "Lucas"
+    github = "blotta"

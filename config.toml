@@ -1,4 +1,4 @@
-baseURL = "https://lucas.blotta.info"
+baseURL = "https://lucas.blotta.info/"
 languageCode = "en-us"
 title = "Lucas Blotta"
 theme = "temple"

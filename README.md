@@ -2,7 +2,7 @@
 
 ```sh
 git clone https://github.com/blotta/blog.git
-cd clone
+cd blog
 git submodule update --init --recursive
 ```
 

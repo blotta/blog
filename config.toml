@@ -1,16 +1,61 @@
-baseURL = "https://lucas.blotta.info/"
-languageCode = "en-us"
+baseURL = "https://blog.blotta.info/"
 title = "Lucas Blotta"
-theme = "temple"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+paginate = 10
 
 [params]
-    highlight = true
-    topmenu = "categories"
+    dateform = "Jan 2, 2006"
+    dateformShort = "Jan 2"
+    dateformNum = "2006-01-02"
+    dateformNumTime = "2006-01-02 15:04 -0700"
 
-[taxonomies]
-    tag = "tags"
-    category = "categories"
+    # Subtitle for home
+    homeSubtitle = "blog"
+
+    # hide links to other posts
+    disableReadOtherPosts = false
+
+    # Enable sharing buttons
+    enableSharingButtons = false
+
+    # Metadata mostly used in doc's head
+    description = "My new homepage or blog"
+    keywords = "homepage, blog"
+    images = [""]
+
+    # default theme (light dark)
+    defaultTheme = "dark"
+
+[blackfriday]
+    hrefTargetBlank = true
 
 [author]
     name = "Lucas Blotta"
-    github = "blotta"
+
+[taxonomies]
+    category = "blog"
+    tag = "tags"
+    series = "series"
+
+[languages]
+    [languages.en]
+        title = "Lucas Blotta"
+        subtitle = "Blog"
+        keywords = ""
+        copywrite = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+        readOtherPosts = "Read other posts"
+
+        [laguages.en.params.logo]
+            logoText = "hello friend ng"
+            logoHomeLink = "/"
+    
+    [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts"
+
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "about"

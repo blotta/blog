@@ -20,8 +20,8 @@ paginate = 10
     enableSharingButtons = false
 
     # Metadata mostly used in doc's head
-    description = "My new homepage or blog"
-    keywords = "homepage, blog"
+    description = "Development Blog"
+    keywords = "homepage, blog, gamedev, development, programming"
     images = [""]
 
     # default theme (light dark)

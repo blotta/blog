@@ -3,6 +3,7 @@ title = "Lucas Blotta"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 paginate = 10
+googleAnalytics = "UA-162361211-2"
 
 [params]
     dateform = "Jan 2, 2006"

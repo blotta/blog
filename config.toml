@@ -5,6 +5,17 @@ theme = "hello-friend-ng"
 paginate = 10
 googleAnalytics = "UA-162361211-2"
 
+[author]
+    name = "Lucas Blotta"
+
+# [blackfriday]
+#     hrefTargetBlank = true
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
+
 [params]
     dateform = "Jan 2, 2006"
     dateformShort = "Jan 2"
@@ -28,16 +39,18 @@ googleAnalytics = "UA-162361211-2"
     # default theme (light dark)
     defaultTheme = "dark"
 
-[blackfriday]
-    hrefTargetBlank = true
+    [[params.social]]
+        name = "github"
+        url  = "https://github.com/blotta"
 
-[author]
-    name = "Lucas Blotta"
+    [[params.social]]
+        name = "linkedin"
+        url  = "https://www.linkedin.com/in/lucas-blotta/"
 
-[taxonomies]
-    category = "blog"
-    tag = "tags"
-    series = "series"
+    [[params.social]]
+        name = "email"
+        url  = "mailto:lucas@blotta.info"
+
 
 [languages]
     [languages.en]
@@ -51,6 +64,7 @@ googleAnalytics = "UA-162361211-2"
             logoText = "hello friend ng"
             logoHomeLink = "/"
     
+[menu]
     [[menu.main]]
         identifier = "posts"
         name = "Posts"

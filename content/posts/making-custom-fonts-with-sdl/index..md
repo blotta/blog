@@ -4,6 +4,8 @@ date: 2020-08-05T16:24:34-03:00
 draft: false
 toc: false
 images:
+series:
+  - "Custom SDL Fonts"
 tags:
   - sdl
   - c

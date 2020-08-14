@@ -71,6 +71,11 @@ googleAnalytics = "UA-162361211-2"
         url = "/posts"
 
     [[menu.main]]
+        identifier = "series"
+        name = "Series"
+        url = "/series"
+
+    [[menu.main]]
         identifier = "about"
         name = "About"
         url = "about"

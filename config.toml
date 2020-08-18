@@ -15,6 +15,7 @@ googleAnalytics = "UA-162361211-2"
     category = "categories"
     tag = "tags"
     series = "series"
+    project = "projects"
 
 [params]
     dateform = "Jan 2, 2006"
@@ -65,6 +66,11 @@ googleAnalytics = "UA-162361211-2"
             logoHomeLink = "/"
     
 [menu]
+    [[menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "projects"
+
     [[menu.main]]
         identifier = "posts"
         name = "Posts"

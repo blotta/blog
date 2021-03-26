@@ -69,17 +69,17 @@ googleAnalytics = "UA-162361211-2"
     [[menu.main]]
         identifier = "projects"
         name = "Projects"
-        url = "projects"
+        url = "projects/"
 
     [[menu.main]]
         identifier = "posts"
         name = "Posts"
-        url = "/posts"
+        url = "posts/"
 
     [[menu.main]]
         identifier = "series"
         name = "Series"
-        url = "/series"
+        url = "series/"
 
     [[menu.main]]
         identifier = "about"

@@ -1,4 +1,4 @@
-baseURL = "https://blog.blotta.info/"
+baseURL = "https://lucas.blotta.info/"
 title = "Lucas Blotta"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -24,7 +24,7 @@ googleAnalytics = "UA-162361211-2"
     dateformNumTime = "2006-01-02 15:04 -0700"
 
     # Subtitle for home
-    homeSubtitle = "blog"
+    homeSubtitle = "Developer & Musician"
 
     # hide links to other posts
     disableReadOtherPosts = false

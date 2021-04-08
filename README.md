@@ -1,48 +1,23 @@
-## Cloning
+## Local Setup (Optional)
 
-```sh
-git clone https://github.com/blotta/blog.git
-cd blog
-git submodule update --init --recursive
+Create `.bundle/config`
+```yaml
+---
+BUNDLE_PATH: "vendor/bundle"
 ```
 
-## Updating Submodules
-```sh
-git submodule update --recursive
+## Install
+```
+bundle install
 ```
 
-## Development Dependencies
-* [Hugo](https://gohugo.io/)
-
-## Serve Locally
-```sh
-hugo server -D # -D => with drafts
+## Build
+```
+bundle exec jekyll build
 ```
 
-## Create Post
-```sh
-hugo new posts/new_post.md
-# or
-hugo new posts/new_post/index.md
-# or
-hugo new posts/new_series/first_post.md
-```
+## Serve
 
-## Create Site
-Updates files in `public/`
-```sh
-hugo
 ```
-
-## Upload Site
-Commit the `public` submodule before the hugo project
-```sh
-cd public
-git add *
-git commit -m "message"
-git push
-cd ..
-git add *
-git commit -m "message"
-git push
+bundle exec jekyll serve
 ```

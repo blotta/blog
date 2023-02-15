@@ -13,6 +13,7 @@ tags:
 links:
 - name: Source Code
   url: https://github.com/blotta/semanaomnistack11
+priority: 30
 ---
 
 A week-long course provided by [Rocketseat](https://rocketseat.com.br/)

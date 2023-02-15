@@ -13,6 +13,7 @@ links:
   url: https://itch.io/jam/gmtk-2020/rate/699537
 - name: Source Code
   url: https://github.com/blotta/click-drive
+priority: 0
 ---
 
 A game made in 48 hours for the GMTK 20 game jam.

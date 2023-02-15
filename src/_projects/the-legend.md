@@ -13,6 +13,7 @@ links:
   url: https://ldjam.com/events/ludum-dare/48/the-legend
 - name: Source Code
   url: https://github.com/blotta/ld48
+priority: 50
 ---
 
 A game made in 48 hours for the Ludum Dare 48 game jam.

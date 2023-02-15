@@ -10,6 +10,7 @@ tags:
 links:
 - name: Play
   url: https://play.google.com/store/apps/details?id=info.blotta.games.realpool
+priority: 50
 ---
 
 

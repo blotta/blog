@@ -13,6 +13,7 @@ links:
   url: https://ldjam.com/events/ludum-dare/45/snowball-1
 - name: Souce Code
   url: https://bitbucket.org/blotta/ld45-snowball/src/master/
+priority: 0
 ---
 
 A game made in 72 hours for the Ludum Dare 45 game jam.

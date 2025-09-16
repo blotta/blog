@@ -1,32 +1,10 @@
----
----
-@import "normalize";
-@import "prism";
+@use 'normalize.css';
+@use 'prism.css';
 
-@import "variables";
-@import "mixins";
-@import "fonts";
-@import "buttons";
+@use '_scss/fonts';
 
-@import "header"; // header, menu, logo
-@import "main";
-@import "list";
-@import "single"; // single
-
-// /* Must be loaded before everything else */
-// @import "normalize";
-// @import "prism";
-// /* Main stuff */
-// @import "variables";
-// @import "mixins";
-// @import "fonts";
-// @import "buttons";
-// /* Modules */
-// @import "header";
-// @import "logo";
-// @import "menu";
-// @import "main";
-// @import "list";
-// @import "single";
-// @import "footer";
-// @import "sharing-buttons";
+@use '_scss/buttons';
+@use '_scss/header';
+@use '_scss/main';
+@use '_scss/list';
+@use '_scss/single';

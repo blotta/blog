@@ -1,0 +1,11 @@
+---
+title: "All Categories"
+layout: default.liquid
+---
+
+<h1>All Categories</h1>
+<ul>
+{% for category in collections.categoryList %}
+  <li><a href="/categories/{{ category | slugify }}/">{{ category }}</a></li>
+{% endfor %}
+</ul>

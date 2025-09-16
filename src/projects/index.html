@@ -1,0 +1,30 @@
+---
+layout: default
+title: Projects
+---
+
+<main class="projects">
+    <h1>Projects</h1>
+
+    <div class="projects-group">
+        <ul class="projects-list">
+            {% assign proj_list = site.projects | sort: 'priority' | reverse %}
+            {% for project in collections.projects %}
+            <li class="project-item"
+                onclick="window.location='{{ project.url }}'"
+                tabindex="1">
+                <div class="project-title">{{ project.data.title }}</div>
+                <div class="project-tags">
+                    {% assign sorted_tags = project.data.categories | sort %}
+                    {% for tag in sorted_tags %}
+                    <span class="tag">
+                        <a href="/categories/{{ tag | slugify }}">{{ tag }}</a>
+                    </span>
+                    {% endfor %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</main>

@@ -4,17 +4,17 @@ title: Home
 my_number: 5
 ---
 <main aria-role="main">
+  <div>
+    <h1>Lucas Blotta</h1>
+    <p>Developer | Musician</p>
     <div>
-        <h1>Lucas Blotta</h1>
-        <p>Developer | Musician</p>
-        <div>
-            {% for item in site.data.social %}
-                &nbsp;
-                <a href="{{ item.link }}" target="_blank" rel="noopener" title="{{ item.name }}" style="text-decoration: none;">
-                    {% include social-icons.html %}
-                </a>
-                &nbsp;
-            {% endfor%}
-        </div>
+      {% for item in social %}
+      &nbsp;
+      <a href="{{ item.link }}" target="_blank" rel="noopener" title="{{ item.name }}" style="text-decoration: none;">
+        {% include "social-icons.liquid" %}
+      </a>
+      &nbsp;
+      {% endfor%}
     </div>
+  </div>
 </main>

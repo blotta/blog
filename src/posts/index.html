@@ -1,0 +1,22 @@
+---
+layout: default.liquid
+title: Posts
+---
+
+<main class="posts">
+    <h1>Posts</h1>
+
+    <div class="posts-group">
+        <ul class="posts-list">
+            {% for post in collections.post %}
+            <li class="post-item">
+                <a href="{{ post.url }}">
+                    <span class="post-title">{{ post.data.title }}</span>
+                    <span class="post-day">{{ post.date | date_to_string }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</main>

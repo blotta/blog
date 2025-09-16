@@ -1,0 +1,17 @@
+{
+    "sitename": "Blog 3",
+    "navigation": [
+        {
+            "name": "About",
+            "link": "/about/"
+        },
+        {
+            "name": "Posts",
+            "link": "/posts/"
+        },
+        {
+            "name": "Projects",
+            "link": "/projects/"
+        }
+    ]
+}

@@ -9,7 +9,7 @@ categories:
 - gamedev
 ---
 
-[Last time](/posts/2020/08/05/making-custom-fonts-with-sdl/), I went through the process of transforming bits from a series
+[Last time](/posts/making-custom-fonts-with-sdl/), I went through the process of transforming bits from a series
 of bytes to pixels in a texture, making a custom character render on the
 screen. Expanding on that, I want to be able to load many characters and
 display them separately.

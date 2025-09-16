@@ -12,7 +12,7 @@ A few months ago, I created a system to load a series of bytes and transform
 then into a SDL texture that could then be clipped and rendered as individual
 characters on the screen. On this post, I'll go through how I used that
 system to display a series of characters on a given screen position with one
-function call. [Here is the last post](/posts/2020/08/12/custom-font-texture-loader-with-sdl/).
+function call. [Here is the last post](/posts/custom-font-texture-loader-with-sdl/).
 
 Before getting into all that, I refactored the `bits_to_pixels` and
 `data_to_texture` functions to be more flexible.

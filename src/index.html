@@ -1,20 +1,99 @@
 ---
 layout: default
 title: Home
-my_number: 5
 ---
-<main aria-role="main">
-  <div>
-    <h1>Lucas Blotta</h1>
-    <p>Developer | Musician</p>
-    <div>
-      {% for item in social %}
-      &nbsp;
-      <a href="{{ item.link }}" target="_blank" rel="noopener" title="{{ item.name }}" style="text-decoration: none;">
-        {% include "social-icons.liquid" %}
-      </a>
-      &nbsp;
-      {% endfor%}
+<main class="home" role="main">
+  <section class="home-hero">
+    <div class="home-hero__intro">
+      <p class="home-hero__eyebrow">Full-stack .NET developer</p>
+      <h1 class="home-hero__title">Engineering dependable .NET and SQL platforms for growing products.</h1>
+      <p class="home-hero__subtitle">
+        I'm Lucas Blotta, a São Paulo based engineer focused on building maintainable services with .NET Core and
+        well-structured SQL. I rely on Azure to keep deployments smooth and partner with Angular teams to deliver cohesive
+        end-to-end experiences.
+      </p>
+      <div class="home-actions">
+        <a class="home-button home-button--primary" href="/posts/">Read recent posts</a>
+        <a class="home-button home-button--secondary" href="/projects/">See highlighted projects</a>
+      </div>
+      <ul class="home-social">
+        {% for item in social %}
+        <li>
+          <a href="{{ item.link }}" target="_blank" rel="noopener" title="{{ item.name }}">
+            {% include "social-icons.liquid" %}
+            <span class="screen-reader-text">{{ item.name }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
-  </div>
+    <div class="home-hero__panel">
+      <h2>Currently focused on</h2>
+      <ul>
+        <li>Designing .NET APIs and background services that stay clean and evolvable.</li>
+        <li>Tuning SQL Server and other relational databases for clarity and performance.</li>
+        <li>Automating infrastructure and monitoring workflows on Azure.</li>
+        <li>Delivering modern front-ends with Angular that complement robust backends.</li>
+      </ul>
+    </div>
+  </section>
+
+  {% assign recentPosts = collections.post | reverse | slice: 0, 3 %}
+  <section class="home-section">
+    <div class="home-section__header">
+      <h2>Fresh from the blog</h2>
+      <a class="home-section__link" href="/posts/">Browse all posts</a>
+    </div>
+    <div class="home-grid">
+      {% for post in recentPosts %}
+      <article class="home-card">
+        <a class="home-card__link" href="{{ post.url }}">
+          <header class="home-card__header">
+            <span class="home-card__badge">Post</span>
+            <span class="home-card__date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </header>
+          <h3 class="home-card__title">{{ post.data.title }}</h3>
+          <p class="home-card__excerpt">{{ post.templateContent | strip_html | truncate: 140 }}</p>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% assign featuredProjects = collections.projects | slice: 0, 3 %}
+  <section class="home-section">
+    <div class="home-section__header">
+      <h2>Selected projects</h2>
+      <a class="home-section__link" href="/projects/">Explore all projects</a>
+    </div>
+    <div class="home-grid home-grid--projects">
+      {% for project in featuredProjects %}
+      <article class="home-card home-card--project">
+        <a class="home-card__link" href="{{ project.url }}">
+          {% if project.data.image %}
+          <img class="home-card__image" src="{{ project.data.image }}" alt="{{ project.data.title }} thumbnail">
+          {% endif %}
+          <div class="home-card__body">
+            <header class="home-card__header">
+              <span class="home-card__badge home-card__badge--project">Project</span>
+            </header>
+            <h3 class="home-card__title">{{ project.data.title }}</h3>
+            <p class="home-card__excerpt">{{ project.templateContent | strip_html | truncate: 140 }}</p>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="home-section home-section--contact">
+    <div class="home-section__inner">
+      <h2>Have a platform that needs to ship faster?</h2>
+      <p>
+        Whether it's evolving .NET services, untangling SQL Server performance, or orchestrating Azure infrastructure,
+        I'm ready to help your team deliver with confidence.
+      </p>
+      <a class="home-button home-button--primary" href="mailto:lucas@blotta.info">Start a conversation</a>
+    </div>
+  </section>
 </main>

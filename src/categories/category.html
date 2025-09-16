@@ -3,18 +3,48 @@ pagination:
   data: collections.categoryList
   size: 1
   alias: category
-permalink: "/categories/{{ category | slugify }}/index.html"
+permalink: "/categories/{{ category | slug }}/index.html"
 layout: default.liquid
 ---
 
-<h1>“{{ category }}”</h1>
+<h1 class="category-title">“{{ category }}”</h1>
 
-<ul>
-{% for item in collections.all %}
-  {% if item.data.categories contains category %}
-    <li>
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
-    </li>
-  {% endif %}
-{% endfor %}
-</ul>
+<div class="category-grid">
+  {% for item in collections.all %}
+    {% if item.data.categories contains category %}
+      {% if item.data.tags contains "project" %}
+        <!-- Project Card -->
+        <div class="card project">
+          <a href="{{ item.url }}">
+            <img src="{{ item.data.image }}" alt="{{ item.data.title }}">
+          </a>
+          <div class="card-body">
+            <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+            <p class="badge">Project</p>
+            {% if item.data.links %}
+              <ul class="links">
+                {% for link in item.data.links %}
+                  <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      {% else %}
+        <!-- Blog Post Card -->
+        <div class="card post">
+          <div class="card-body">
+            <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+            <p class="badge">Post</p>
+            {% if item.date %}
+              <small>{{ item.date | date: "%B %d, %Y" }}</small>
+            {% endif %}
+            {% if item.templateContent %}
+              <p>{{ item.templateContent | truncatewords: 30 }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>

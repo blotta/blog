@@ -6,21 +6,18 @@ layout: default.liquid
 <h1>All Categories</h1>
 
 <div class="categories-grid">
-  {% for category in collections.categoryList %}
+    {% for category in collections.categoryList %}
     <a class="category-card" href="/categories/{{ category | slugify }}/">
-      <div class="category-icon">#</div>
-      <div class="category-body">
-        <h2>{{ category }}</h2>
-        <p>
-          {% assign count = 0 %}
-          {% for item in collections.all %}
-            {% if item.data.categories contains category %}
-              {% assign count = count | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-          {{ count }} item{% if count != 1 %}s{% endif %}
-        </p>
-      </div>
+        <div class="category-icon">#</div>
+        <div class="category-body">
+            <h2>{{ category }}</h2>
+            <p>
+                {% assign count = 0 %} {% for item in collections.all %} {% if
+                item.data.categories contains category %} {% assign count =
+                count | plus: 1 %} {% endif %} {% endfor %} {{ count }} item{%
+                if count != 1 %}s{% endif %}
+            </p>
+        </div>
     </a>
-  {% endfor %}
+    {% endfor %}
 </div>

@@ -3,7 +3,7 @@
 const menuTrigger = document.querySelector(".menu-trigger");
 const menu = document.querySelector(".menu");
 const mobileQuery = getComputedStyle(document.body).getPropertyValue(
-  "--phoneWidth"
+  "--phoneWidth",
 );
 const isMobile = () => window.matchMedia(mobileQuery).matches;
 const isMobileMenu = () => {
@@ -16,7 +16,7 @@ isMobileMenu();
 menuTrigger &&
   menuTrigger.addEventListener(
     "click",
-    () => menu && menu.classList.toggle("hidden")
+    () => menu && menu.classList.toggle("hidden"),
   );
 
 window.addEventListener("resize", isMobileMenu);
